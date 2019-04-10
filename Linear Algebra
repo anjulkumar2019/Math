@@ -14,8 +14,8 @@ print("print matrix determinant \n", mat_det)
 
 """
 calculate rank of matrix
-in the output you would see rank=2 because 3rd columns has no pivot and after 
-some performing row reduction you would find 2nd and 3rd are in the same space
+in the output if see rank less then number of columns or rows then it is because matrix is having less pivots and after 
+some performing row reduction you would find some rows or columns in the same space
 """
 mat_rank = np.linalg.matrix_rank(matrix)
 print("print matrix rank \n", mat_rank)
