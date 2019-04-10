@@ -1,1 +1,46 @@
+import numpy as np
+
+# create a symetric matrix
+matrix = np.array([[1,2,3],[4,5,6],[7,8,10]])
+print("print matrix \n", matrix)
+# Create transpose
+mat_transpose = np.transpose(matrix)
+print("print matrix transpose \n", mat_transpose)
+"""
+calculate determinant of matrix 
+"""
+mat_det = np.linalg.det(matrix)
+print("print matrix determinant \n", mat_det)
+
+"""
+calculate rank of matrix
+in the output you would see rank=2 because 3rd columns has no pivot and after 
+some performing row reduction you would find 2nd and 3rd are in the same space
+"""
+mat_rank = np.linalg.matrix_rank(matrix)
+print("print matrix rank \n", mat_rank)
+
+"""
+calculate Inverse of a matrix
+"""
+
+mat_inverse = np.linalg.inv(matrix)
+print("print matrix Inverse \n", mat_inverse)
+
+"""
+Inverse of matrix has a property that 
+A^-1 . A = I
+So, when you multiply inverse of matrix a with itself then you should get an Identity matrix
+"""
+
+mat_identity = np.dot(matrix,mat_inverse)
+print("print multiplication of matrix Inverse and matrix\n", mat_identity)
+
+"""
+you would be seeing not a perfect identity matrix but very small numbers at non diagonal position.
+It is because of the rounding error in computer and depend upon the bit processor you are using 
+"""
+
+
+
 
